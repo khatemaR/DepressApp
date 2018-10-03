@@ -1,0 +1,168 @@
+<!DOCTYPE 
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: #eeeeee;
+		}
+		.grid{
+			width: 600px;
+			height:500px;
+			margin:0 auto;
+			background-color: #fff;
+			padding: 10px 50px 50px 50px;
+			border-radius: 50px;
+			border:2px solid #cbcbcb;
+			box-shadow: 10px 15px 5px #cbcbcb;
+
+		}
+		.grid h1{
+			font-family: sans-serif;
+			background-color: lightblue;
+			font-size: 60px;
+			text-align: center;
+			padding: 2px 0px;
+			border-radius: 50px;
+			margin-top: 4%;
+
+		}
+		.grid #question{
+			font-family: sans-serif;
+			font-size: 30px;
+			color:black;
+			direction: rtl;
+
+		}
+		.botton{
+			margin-top: 30px;
+
+		}
+		#btn0,#btn1,#btn2,#btn3{
+			background-color: lightblue;
+			width: 250px;
+			font-size:20px; 
+			color:black;
+			border:1px solid lightblue;
+			border-radius: 50px;
+			margin: 10px 40px 1px 0px;
+			padding: 10px 10px;
+		}
+		#during{
+			margin-top: 3%;
+			color:2b2b2b;
+			font-size: 18px;
+
+		}
+		#btn0:hover,#btn1:hover,#btn2:hover,#btn3:hover{
+			cursor: pointer;
+			
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<div id="quiz">
+			<h1>سوالات</h1>
+			<hr style="margin-bottom: 10px">
+			<div id="data">
+			<p id="question"></p>
+			<div class="botton">
+			<button id="btn0" class="btn" onclick="checkAnswer(this.value)" value="A" ></button>
+				<button id="btn1" class="btn" onclick="checkAnswer(this.value)"value="B" ></button>
+				<button id="btn2" class="btn" onclick="checkAnswer(this.value)" value="C"></button>
+				<button id="btn3" class="btn" onclick="checkAnswer(this.value)" value="D"></button>
+			</div>
+		</div>
+			<hr style="margin-top: 50px">
+			<footer >
+				<p id = "answer"></p>
+			<p id="counter">Counter</p>
+				<p id="during"></p>
+			</footer>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var num = 0;
+
+	var score =0;
+
+var questions = [
+["هنگام روبه رو شدن با اجتماع دچار استرس شدید ولرزش میشوید؟", 
+	"بسیار زیاد",
+	 "زیاد",
+	  "کم",
+	  "اصلا",
+	   "A","B","C","D"],
+["کارهای بیهوده تان تبدیل به عادت شده است؟", 
+	"بسیار زیاد",
+	 "زیاد",
+	  "کم",
+	  "اصلا",
+	    "A","B","C","D"],
+["خواب شما زیاد شده است؟", 
+	"بسیار زیاد",
+	 "زیاد",
+	  "کم",
+	  "اصلا",
+	    "A","B","C","D"],
+["ایا از خود راضی هستید", 
+	"بسیار زیاد",
+	 "زیاد",
+	  "کم",
+	  "اصلا",
+	    "A","B","C","D"],
+	   ["نسبت به مردم احساس خوبی دارید", 
+	"بسیار زیاد",
+	 "زیاد",
+	  "کم",
+	  "اصلا",
+	    "A","B","C","D"
+]
+];
+
+
+function _(x) {
+	return document.getElementById(x);
+}
+function renderQuestion() {
+	if(num>=questions.length){
+
+		_("data").innerHTML = "<h1 id='res'>You are "+score+"% depressed</h1>";
+	}
+	_("question").innerHTML = questions[num][0];
+	_("btn0").innerHTML = questions[num][1] ;
+	_("btn1").innerHTML = questions[num][2] ;
+	_("btn2").innerHTML = questions[num][3] ;
+	_("btn3").innerHTML = questions[num][4] ;
+	_("counter").innerHTML = num+1 + " از" + questions.length;
+	
+
+}
+
+function checkAnswer(value) {
+	if ( value == questions[num][5]) {
+		score+=10;
+	}
+	 else if ( value == questions[num][6]){
+	 	score+=20;
+	 }
+	else if ( value == questions[num][7]){
+		score+=5;
+	}
+	  else if( value == questions[num][8]){
+		score+=0;
+	}
+	num++;
+	renderQuestion();
+}
+
+
+window.addEventListener("load", renderQuestion);
+
+
+	</script>
+</body>
+</html>

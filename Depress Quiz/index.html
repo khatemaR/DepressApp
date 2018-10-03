@@ -1,0 +1,443 @@
+<!DOCTYPE>
+
+<head>
+	<title></title>
+	<style type="text/css">
+	body{
+			
+			
+		}
+		.main{
+			border:1px solid #000;
+			width: 90%;
+			position: relative;
+			margin: 30px auto;
+			background-color: lightblue;
+
+		}
+		.container{
+			width: 500px;
+			height: 300px;
+			margin: 30px auto;
+			border:1px solid #000;
+			overflow: hidden;
+			
+
+		}
+		.container .slider{
+			width: 2500px;
+			height: 2500px;
+			position: relative;
+			transition: all 1s ease-in-out;
+
+		}
+		.container .slider .box{
+			float: left;
+			width: 450px ;
+			height: 100%;
+		}
+		.container .slider .box:first-child{
+			
+		}
+		.container .slider .box:nth-child(2){
+			background-color:green;
+			
+		}.container .slider .box:nth-child(3){
+			background-color: yellow;
+		}.container .slider .box:last-child{
+			background-color: pink;
+		}
+		.main .nav{
+			position:absolute;
+			top: 40%;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			font-size: 45px;
+			color:#fff;
+			background:rgba(36,33,32,0.4);
+			cursor: pointer;
+			transition: all .5s ease-in-out;
+			text-align: center;
+			opacity: 0.5;
+		}
+		.main:hover .nav{
+			opacity: 1;
+
+		}
+		.main .nav:hover{
+			background:rgba(10,10,10,0.6);
+			color:orangered;
+		}
+		.next{
+			right: 0;
+		}
+		.previos{
+			left:0;
+		}
+		.box{
+			direction: rtl;
+			padding: 20px;
+			background-color: rgba(255,255,255,0,5);
+			
+			
+			
+		
+	
+			
+		}
+
+
+
+
+
+
+
+
+			#paragraph{
+			font-size: 50px;
+			text-align: center;
+			color:green;
+			font-weight: bold;
+		}
+
+			.card{
+			margin-left: 15%;
+			margin-top: 18%;
+			position: relative; 
+			transform: translate(-50%,-50%);
+			width: 250px;
+			height: 300px;
+			
+			
+			transform-style: preserve-3d;
+			perspective: 600px;
+			transition: 0.5s;
+		}
+		.card .front{
+			position: absolute;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			backface-visibility:hidden;
+			transform: rotateX(0deg);
+			background: #000;
+			transition: 0.5s;
+		}
+		.card .back{
+			position: absolute;
+			left:0;
+			width: 100%;
+			height: 100%;
+			backface-visibility:hidden;
+			transform: rotateX(180deg);
+			background: #000;
+			transition: 0.5s;
+		}
+		.card:hover .front{
+			transform: rotateX(-180deg);
+
+		}
+		.card:hover .back{
+			transform: rotateX(0deg);
+
+		}
+
+		img{
+			width: 250px;
+			height: 300px;
+		}
+		.card .back .detail{
+			position: absolute;
+			top:50%;
+			transform: translateY(-50%);
+			left:0;
+			width: 100%;
+			text-align: center;
+			padding: 20px;
+			box-sizing: border-box;
+
+		}
+		.card .back:before{
+			content:'';
+			position: absolute;
+			top:0;
+			left:-50%;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			background: rgba(255,255,255,0.3);
+
+			
+		}
+		.card .back .detail h2{
+			color:#fff;
+			margin: 0;
+			padding: 0;
+			font-size: 24px;
+
+		}
+		#fisad{
+			color:white;
+		}
+		a{
+			color:white;
+			font-size: 20px;
+		
+			padding:1%;
+			border-radius: 50%;
+			text-decoration: none;
+		}
+		a:hover{
+			background:lightblue;
+		}
+
+		#nebor{
+			margin-top: -70%;
+			margin-left: 35%;
+		}
+		#moshavere{
+			margin-left: 25%;
+			margin-top: -30%;
+			padding-right: 2%;
+		}
+		
+		#secound{
+			width: 65%;
+			
+			direction: rtl;
+		}
+
+		#demo{
+			width: 250px;
+			height: 250px;
+			background-color: lightblue;
+			direction: rtl;
+			
+			margin-top: -8%;
+			
+			
+			
+		}
+		#pink p{
+			
+			width: 200px;
+			height:200px;
+			padding: 10px;
+			
+
+			
+			
+		}
+		#pink a{
+			text-decoration: none;
+			margin-top: -18px;
+			margin-right:18%;
+			color:red;
+		}
+		#dokme{
+			background-color: lightblue;
+			border:solid 1px lightblue;
+			margin-left: 6%;
+			margin-top: 6%;
+			border-radius: 50%;
+		}
+		#gggir #girl{
+			margin-top: -31%;
+			margin-left: 25%;
+		}
+		#yek{
+			background-color: rgba(0,0,128,1.0);
+			color:white;
+			margin-left: 4%;
+		}
+		#do{
+			background-color: rgba(0,0,255,1.0);
+			color:white;
+		}
+		#se{
+			background-color: lightblue;
+			color:white;
+		}
+
+
+		
+	</style>
+		<link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+	<center>
+		<div id="head2">
+	<img id="head" src="img/17.jpg"  width="96%" style=" margin-left:1%;"  height="300px">
+	</div>
+	</center>
+	<div id=read>
+		<div class="paragraph" id="yek">
+			<h2>تغیییرات فاحش وزن</h2>
+			<p>افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه  </p>
+		</div>
+
+		<div class="paragraph" id="do">
+			<h2>تغییرات عادت خواب</h2>
+			<p>افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه  </p>
+		
+		</div>
+		<div class="paragraph" id="se">
+			<h2>گوشه گیری</h2>
+			<p>افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه  </p>
+		
+		</div>
+
+	</div>
+	<div id="maine">
+		<div id="left">
+			<div id="content">
+			<h2>به سایت ما خوش امدید</h2>
+			<hr>
+			<h1>ایا روش های درمان افسردگی را میشناسید؟</h1>
+			<p>افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته است<
+			افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که 
+
+			احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته است<
+			افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته است<
+			افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که 
+		</p>
+		
+		</div>
+	</div>
+		</div>
+			<a id="showmore">بیشتر</a>
+		
+		
+	</div>
+	<div>
+		<div>
+		<div>
+		<p id="paragraph"></p>
+	</div>
+	<div class="card">
+		<div class="front"><img src="img/6.jpg" >
+		
+	</div>
+	
+		<div class="back">
+			<div class="detail">
+				<h2>ایا اخساس افسرده گی میکنید</h2>
+					<h5 id="fisad">با کلیک کردن دکمه زیر میزان افسذدگی حود را یسنخسد</h5>
+					<a href="question.html">سوالات</a>>
+			</div>
+
+		</div>
+	</div>
+	<div id="moshavere">
+		<div id="demo">
+		<p  id="you"><img src="img/10.jpg" width="200px" height="200px"></p>
+
+		<div id="pink">
+		<p class="me" style="display: none;">احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انه</p>
+		<a href="suggestion.html" class="me" style="display: none;">بیشتر</a>
+	</div>
+</div>
+	
+	
+	<button id="dokme" onclick="clickme()">click me</button>
+		<div id="gggir">
+			<img  id="girl"src="img/dep.jpg" >
+		</div>
+	</div>
+
+	
+	
+				
+	<div id="secound">
+			
+			<h1>ایا مزیت های مشاوره تلفونی را میشناسید</h1>
+			<p>افسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته است</p>
+		</div>
+		</div>
+		</div>
+
+		<div id="right">
+			<h1>علایمهای افسردگی</h1>
+			<ul>
+				<li>غصبانیت</li>
+				<li>ناامیدی</li>
+				<li>از دست دادن علاقه </li>
+				<li>تغییرات فاحش وزن </li>
+				<li>غییر عادت خواب </li>
+
+			</ul>
+			<div id="middle">
+				
+				<h3>عصبانیت و بد خلقی</h3>
+				<p>معمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشود</p>
+			</div>
+			<h2>ناامیدی و بیقراری</h2>
+			<p>معمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشودمعمولا در افراد افسرده علایمی مانند خشونت و بیقراری دیده میشود</p>
+		</div>
+		</div>
+	
+	<footer>
+		<a href="index.html">صفحه اصلی</a>
+		<span>|</span>
+		<a href="suggestion.html">مشاوره</a>
+		<span>|</span>
+		<a href="question.html">سوالات</a>
+		<span>|</span>
+		<a href="effective.html">علایم افسردگی</a>
+		<span>|</span>
+		<a href="about.html">درباره ما</a>
+		<p>سوالات خود را در این سایت مطرح نمایید</p>
+
+			
+		
+	</footer>
+		<script type="text/javascript">
+
+			var content=document.getElementById("content");
+			var button=document.getElementById("showmore");
+			button.onclick=function(){
+				if(content.className=="open"){
+					content.className="";
+					button.innerHTML="یشتر";
+
+				}else{
+					content.className="open";
+					button.innerHTML="کمتر";
+
+				}
+			}
+
+		var showbox=0;
+		function fnext(){
+			showbox+=-490;
+			if (showbox<-2000) {
+				showbox=0;
+			}
+			document.getElementById('sld').style.transform="translateX("+showbox+"px)";
+
+
+		}
+		function fprevios(){
+				showbox+=490;
+			if (showbox>0) {
+				showbox=-2000;
+			}
+			document.getElementById('sld').style.transform="translateX("+showbox+"px)";
+
+		}
+		function clickme(){
+				document.getElementsByClassName('me')[0].style.display="block";
+				document.getElementsByClassName('me')[1].style.display="block";
+				document.getElementById('you').style.display="none";
+
+			}
+			
+	
+
+		</script>
+
+</body>
+</html>

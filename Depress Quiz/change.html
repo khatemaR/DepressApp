@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	
+		#demo{
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			direction: rtl;
+			
+			
+			
+		}
+		#pink p{
+			
+			
+			padding: 10px;
+			
+
+			
+			
+		}
+		#pink a{
+			text-decoration: none;
+			margin-top: -18px;
+			margin-right:18%;
+			color:red;
+		}
+		#dokme{
+			background-color: lightblue;
+			border:solid 1px lightblue;
+			margin-left: 3%;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="demo">
+		<p  id="you"><img src="img/10.jpg" width="200px" height="200px"></p>
+
+		<div id="pink">
+		<p class="me" style="display: none;">احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انها علاقه داشته استافسردگی یک نوع حالت روحی است که در ان فرد احساس افسردگی میکندکه شامل غم و ناامیدی و یا از دست دادن علاقه خود به چیزهایی است که قبلا به انه</p>
+		<a href="suggestion.html" class="me" style="display: none;">بیشتر</a>
+	</div>
+</div>
+	
+	
+	<button id="dokme" onclick="clickme()">click me</button>
+	<script type="text/javascript">
+		function clickme(){
+				document.getElementsByClassName('me')[0].style.display="block";
+				document.getElementsByClassName('me')[1].style.display="block";
+				document.getElementById('you').style.display="none";
+
+			}
+			
+				
+		
+
+		
+
+		
+	</script>
+
+</body>
+</html>
